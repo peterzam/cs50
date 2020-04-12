@@ -1,4 +1,4 @@
-CS50 — 2018 solutions
+CS50 — 2020 solutions
 =====================
 <h2> Table Of Contents </h2>
 
