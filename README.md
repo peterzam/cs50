@@ -1,5 +1,6 @@
 CS50 — 2020 solutions
 =====================
+<h3>Disclaimer - Some of the projects which are not required for me to write/submit are directly copied from <a href='https://github.com/Federico-abss/CS50-intro-course'>Federico-abss/CS50-intro-course</a> and fully credit to Federico-abss.<h3>
 <h2> Table Of Contents </h2>
 
 - [Problem Set 1: C](/C/pset1) - <a href='https://cs50.harvard.edu/x/2020/psets/1/'> Assignments 1</a>
