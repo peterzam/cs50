@@ -42,5 +42,9 @@ CS50 — 2020 solutions
 - [Final Project: Chrome Extension]<a href='https://github.com/peterzam/Facebook-Cleaner'>  Facebook Cleaner </a>
 
 
+<h2>Certificate</h2>
+
+![image](/Certificate.png)
+
 DISCLAIMER:
 Please don't just copy the code, it's totally pointless if you actually wanna learn the subject and against the policy of the course.
