@@ -39,7 +39,8 @@ CS50 — 2020 solutions
   * [houses](/Python/pset7/houses/houses)
 - [Problem Set 8: Web](/Python/finance) - <a href='https://cs50.harvard.edu/x/2020/tracks/web/'> Web Tracks</a>
   * [finance](/Python/finance)
-- [Final Project: Soon]
+- [Final Project: Chrome Extension]<a href='https://github.com/peterzam/Facebook-Cleaner'>  Facebook Cleaner </a>
+
 
 DISCLAIMER:
 Please don't just copy the code, it's totally pointless if you actually wanna learn the subject and against the policy of the course.
