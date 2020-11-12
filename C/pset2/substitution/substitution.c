@@ -5,62 +5,64 @@
 #include <math.h>
 #include <stdlib.h>
 
-// This program hides a message received from the user using an alternative alphabet
-// It takes a 26 digits string of unique letters and reassigns the alphabet using it as a key
 int main(int argc, string argv[])
 {
-    // validates user input, it must exist and be a single string of 26 letters
-    if (argc != 2 || strlen(argv[1]) != 26)
+    int key = 0;
+    if (argc == 2)
     {
-        printf("Usage: ./substitution key\n");
-        return 1;
+        key = atoi(argv[1]);
+    }
+    if (key >= 26)
+    {
+        key %= 26;
     }
 
-    char newAlphabet[26];
-    char key[26];
-
-    // assigns the new values to the array newAlphabet and validates the key
-    for (int i = 0; i < 26; i++)
+    if (argc != 2 || key <= 0)
     {
-        key[i] = toupper(argv[1][i]);
-        if (key[i] >= 65 && key[i] <= 90)
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+    for (int i = 0; i < strlen(argv[1]); i++)
+    {
+        if (isdigit(argv[1][i]) == 0)
         {
-            newAlphabet[i] = 65 + i - key[i];
-        }
-        // Returns an error if the key has non alphabetical characters
-        else
-        {
-            printf("Usage: ./substitution key\n");
             return 1;
-        }
-
-        // This loop checks if the current letter of the key is a duplicate
-        for (int j = 0; j < i; j++)
-        {
-            if (key[i] == key[j])
-            {
-                printf("Usage: ./substitution key\n");
-                return 1;
-            }
         }
     }
 
     string text = get_string("plaintext: ");
 
-    // converts the message using the new alphabet
-    for (int i = 0, n = strlen(text); i < n; i++)
+
+    if (argc == 2)
     {
-        if (text[i] >= 65 && text[i] <= 90)
+
+        for (int i = 0, n = strlen(text); i < n; i++)
         {
-            text[i] = text[i] - newAlphabet[text[i] - 65];
-        }
-        else if (text[i] >= 97 && text[i] <= 122)
-        {
-            text[i] = text[i] - newAlphabet[text[i] - 97];
+
+            if (text[i] >= 65 && text[i] <= 90)
+            {
+                if (text[i] + key > 90)
+                {
+                    text[i] -= 26;
+                }
+
+                text[i] += key;
+            }
+
+            else if (text[i] >= 97 && text[i] <= 121)
+            {
+
+                if (text[i] + key > 121)
+                {
+                    text[i] -= 26;
+                }
+
+                text[i] += key;
+            }
         }
     }
 
-    // prints out encrypted message
+
     printf("ciphertext: %s\n", text);
     return 0;
 }
